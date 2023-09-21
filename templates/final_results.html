@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel=stylesheet href="../static/css/styles.css">
+</head>
+<body>
+    <div class="container">    
+        <h1>Game Results</h1>
+        <p>{{ chart_data }}</p>
+        <p>USD/JPY 4時間足 正解結果</p>
+        <p>{{ chart_data }}</p>
+        <img src="{{ url_for('static', filename='chartdata/' + session['chart_name'] + '_correct.png') }}" alt="Correct Chart">
+        
+        <h2>USD/JPY Rate {{ last_open_value }} →{{ correct_open_value }}</h2>
+        <h2>あなたの行動: {{ session['player_action'] }}  {{ session['player_lot'] }}ロット</h2>
+        <h2>AIの行動: {{ session['ai_action'] }} {{ session['ai_lot'] }}ロット</h2>
+    
+        <h2>Player Money: {{ before_player_money }}万円 → {{ player_money }}万円</h2>
+        <h2>AI Money: {{ before_ai_money }}万円 → {{ ai_money }}万円</h2>
+
+        <h1 class="result">You {{ result }} </h1>
+        
+    
+        <a href="{{ url_for('home') }}" class="btn">To Home</a>
+        <form  method="post">
+            <label for="player_name">Your Name:</label>
+            <input type="text" id="player_name" name="player_name" required>
+            <button type="submit">Submit Name</button>
+        </form>
+        
+        <a href="{{ url_for('rankings') }}" class="btn">To Ranking</a>
+    </div>
+    
+
+</body>
+</html>

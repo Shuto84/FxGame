@@ -1,0 +1,74 @@
+body {
+    height: 100vh;
+    background: #03045e;
+    background: linear-gradient(90deg, rgba(3, 4, 94, 1) 0%, rgba(29, 53, 87, 1) 50%, rgba(44, 83, 100, 1) 100%);
+    color: white;
+    font-family: 'Arial', sans-serif; 
+}
+h1 {
+    font-size: 2.3em;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF; /* ブルー */
+    color: #FFF; /* ホワイトテキスト */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px; /* 上側のスペース追加 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #0056b3; /* ホバー時の色を少し暗く */
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* 必要に応じて調整できます */
+}
+.rankings-container {
+    display: flex;
+    width: 80%;
+    align-items: stretch;
+}
+.scrollable {
+    max-height: 400px;
+    overflow-y: auto;
+}
+/* テーブルの全体的なスタイル */
+table {
+    width: 100%;  /* テーブルの幅を最大に */
+    border-collapse: separate;  /* 列の間隔を調整するための設定 */
+    border-spacing: 20px 0;  /* 列の間隔を広げる */
+}
+
+/* テーブルセルのスタイル */
+table td, table th {
+    text-align: center;  /* テキストを中央に配置 */
+    padding: 5px 20px;  /* セルの内側のスペースを追加 */
+    overflow: hidden;  /* はみ出したテキストを隠す */
+    max-width: 200px;  /* 最大幅を設定 */
+    text-overflow: ellipsis;  /* はみ出したテキストを...で表示 */
+}
+
+/* セルの内容が長い場合に2行で表示するスタイル */
+table td.long-text, table th.long-text {
+    white-space: normal;  /* テキストを自動改行 */
+    max-width: 150px;  /* 最大幅を設定 */
+}

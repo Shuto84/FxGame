@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel=stylesheet href="../static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Result {{ count }} </h1>
+        <p>USD/JPY 4時間足 正解結果</p>
+        <p>{{ chart_data }}</p>
+        <img src="{{ url_for('static', filename='chartdata/' + session['chart_name'] + '_correct.png') }}" alt="Correct Chart">
+        
+        <h2>USD/JPY Rate {{ last_open_value }} →{{ correct_open_value }}</h2>
+        <h2>あなたの行動: {{ session['player_action'] }}  {{ session['player_lot'] }}ロット</h2>
+        <h2>AIの行動: {{ session['ai_action'] }} {{ session['ai_lot'] }}ロット</h2>
+    
+        <h2>Player Money: {{ before_player_money }}万円 → {{ player_money }}万円</h2>
+        <h2>AI Money: {{ before_ai_money }}万円 → {{ ai_money }}万円</h2>
+    
+        <a href="{{ url_for('play') }}" class="btn">Play Again</a>
+    </div>
+</body>
+</html>

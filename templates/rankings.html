@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankings</title>
+    <link rel=stylesheet href="../static/css/styles_ranking.css">
+</head>
+<body>
+    <div class="section">
+        <div class="btn-container">
+            <a href="{{ url_for('home') }}" class="btn">To Home</a>
+        </div>
+    
+        <div class="rankings-container">
+            <div class="section">
+                <h2>Player Rankings</h2>
+                <div class="scrollable">
+                    <table>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Money</th>
+                        </tr>
+                        {% for ranking in player_rankings %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ ranking.name }}</td>
+                            <td>{{ ranking.money }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>AI Rankings</h2>
+                <div class="scrollable">
+                    <table>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Money</th>
+                        </tr>
+                        {% for ranking in ai_rankings %}
+                        <tr>
+                            <td>{{ loop.index }}</td>
+                            <td>{{ ranking.money }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+body {
+    height: 100vh;
+    background: #03045e;
+    background: linear-gradient(90deg, rgba(3, 4, 94, 1) 0%, rgba(29, 53, 87, 1) 50%, rgba(44, 83, 100, 1) 100%);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* 必要に応じて調整 */
+    /* height: 100%; これは必要な場合のみ追加 */ 
+}
+
+.home-background {
+    background-image: url('/static/image/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    width: 70%;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    margin: auto;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.annotaion{
+    font-size: 0.7em;
+    margin-bottom: 0px;
+}
+.start-button {
+    display: inline-block;
+    background-color: #e63946;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.start-button:hover {
+    background-color: #f77f00;
+    transform: scale(1.05);
+}
+form {
+    margin: 20px 0;
+}
+
+label, select, input {
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    background-color: #e63946;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #f77f00;
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF; /* ブルー */
+    color: #FFF; /* ホワイトテキスト */
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px; /* 上側のスペース追加 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* ホバー時の色を少し暗く */
+}
+
+footer {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 12px;
+}
+.result {
+    font-size: 3.0em;
+    margin-bottom: 20px;
+    color:  #e63946;
+}
+
+.scrollable {
+    max-height: 400px;
+    overflow-y: auto;
+}

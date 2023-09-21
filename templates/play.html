@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play</title>
+    <link rel=stylesheet href="../static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>1週間後の値段を予想して行動を選択して下さい！</h1>
+        <p>USD/JPY 4時間足</p>
+        <img src="{{ url_for('static', filename='chartdata/' + session['chart_name'] + '.png') }}" alt="Correct Chart">
+        
+        <p>最大 {{ max_lot }} ロット賭けられます</p>        
+        <form method="post">
+            <label for="action">行動:</label>
+            <select name="action" id="action">
+                <option value="buy">Buy</option>
+                <option value="sell">Sell</option>
+                <option value="hold">Hold</option>
+            </select>
+            
+            <label for="bet_amount">掛け金:</label>
+            <input type="number" name="bet_amount" id="bet_amount" min="0" max="{{ max_lot }}" required>
+
+            
+            <input type="submit" value="Submit">
+        </form>
+        
+        <p>Player Money: {{ player_money }}万円</p>
+        <p>AI Money: {{ ai_money }}万円</p>
+        <p class ="annotaion">※4時間足なのでローソク足と呼ばれる図の1本の棒が4時間となっています。つまり、6本で1日をあわらしています。</p>
+        <p class ="annotaion">※レバレッジは500倍、1ロットは1万通貨です。例えば資金が1000万で1ドル100円のとき、1ロットは100万で5000ロット賭けられます。</p>
+    </div>
+</body>
+</html>
