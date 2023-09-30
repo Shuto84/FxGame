@@ -4,15 +4,12 @@ import pandas as pd
 import os
 import sys
 import getopt
-import time
-import math
 
 from keras.models import Sequential, load_model
 from keras.layers import Dense, Dropout
 from keras.layers import LSTM
-from keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau, CSVLogger
+from keras.callbacks import ModelCheckpoint, EarlyStopping
 from keras import optimizers
-
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
